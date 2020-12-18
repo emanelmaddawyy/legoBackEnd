@@ -30,5 +30,34 @@ module.exports = {
     } catch (error) {
       next(error)
     }
+  },
+
+   // login api
+   async login(req, res, next) {
+    const loggedUser = req.body;
+
+    // validate body
+    if (!loggedUser.email || !loggedUser.password) {
+      res.status(400).send({
+        message: 'All fields are required'
+      });
+
+      return;
+    }
+
+    try {
+      // check if user already exists with the same email
+      const isUserExists = await Users.exists({email: loggedUser.email});
+      if (isUserExists) {
+        res.status(200).send({token: "123", email: loggedUser.email});
+        return;
+      } else {
+        res.status(401).send({
+          message:"register first"
+        });
+      }
+    } catch (error) {
+      next(error)
+    }
   }
 }

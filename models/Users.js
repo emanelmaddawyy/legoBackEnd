@@ -14,6 +14,10 @@ const UsersSchema = new Schema({
   },
   birthDate:{
     type: String
+  },
+  country:{
+    type:String,
+    required:true
   }
 });
 

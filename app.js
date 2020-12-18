@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var authRouter = require('./routes/auth');
+var themesRouter = require('./routes/themes');
+
 //cors 
 var cors = require('cors')
 //create DB Uber
@@ -21,8 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', (req, res, next) => res.send("App is running..."))
 app.use('/auth', authRouter);
+app.use('/themes', themesRouter);
+
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
