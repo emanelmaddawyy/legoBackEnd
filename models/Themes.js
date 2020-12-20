@@ -5,7 +5,14 @@ const ThemesSchema = new Schema({
   name: {
     type: String,
     required: true
+  },
+  visibleId: {
+    type: String,
+    required: true,
+    unique: true
   }
+}, {
+  timestamps: true
 });
 
 const Themes = mongoose.model('themes', ThemesSchema);

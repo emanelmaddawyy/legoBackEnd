@@ -18,7 +18,8 @@ const UsersSchema = new Schema({
   country:{
     type:String,
     required:true
-  }
+  },
+  resetCode: String
 });
 
 const Users = mongoose.model('users', UsersSchema);

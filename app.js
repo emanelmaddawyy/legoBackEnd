@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var authRouter = require('./routes/auth');
 var themesRouter = require('./routes/themes');
+var filtersRouter = require('./routes/filters');
 
 //cors 
 var cors = require('cors')
@@ -16,15 +17,14 @@ mongoose.connect('mongodb+srv://lego_user:L2At1JngbBUu8Vs6@lego.zv7kt.mongodb.ne
 
 var app = express();
 app.use(cors());
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/auth', authRouter);
 app.use('/themes', themesRouter);
+app.use('/filters', filtersRouter);
 
 
 const bodyParser = require('body-parser');
