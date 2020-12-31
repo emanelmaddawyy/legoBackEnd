@@ -6,9 +6,50 @@ const schema = new Schema({
     type: String,
     required: true
   },
-  image: {
-    type: String
-  }
+  subTitle:{
+    type:String
+  },
+  price:{
+    type:Number
+  },
+  rating:{
+    type: Number
+  },
+  images: {
+    type: Array
+  },
+  trending: {
+    type: Boolean,
+    default: false
+  },
+  spotlight: {
+    type:Boolean,
+    default:false
+  },
+  numberOfProduct:{
+    type:Number
+  },
+  avaliable: {
+    type: Boolean,
+    default: false
+  },
+  itemNo:Number,
+  vipPoints:Number,
+  pieces:Number,
+  age:Number,
+  numberOfReviews:Number,
+  theme:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'themes',
+    required:true
+  },
+  interest:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'interest',
+    required:true
+  },
+  itemNo:Number
+
 }, {
   timestamps: true
 });

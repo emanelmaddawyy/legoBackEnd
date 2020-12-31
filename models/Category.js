@@ -11,7 +11,9 @@ const subCategorySchema = new Schema({
     required: true,
     unique: true
   },
-  image: String
+  imgSrc:{
+    type:String
+  },
 }, {
   timestamps: true
 });
@@ -25,6 +27,9 @@ const schema = new Schema({
     type: String,
     required: true,
     unique: true
+  },
+  imgSrc:{
+    type:String
   },
   displayForShopByFilter: Boolean,
   subCategories: [

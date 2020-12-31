@@ -15,8 +15,9 @@ const UsersSchema = new Schema({
   birthDate:{
     type: String
   },
-  country:{
-    type:String,
+  country: {
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'countries',
     required:true
   },
   resetCode: String

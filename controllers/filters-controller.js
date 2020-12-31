@@ -11,13 +11,13 @@ const getShopByFilters = async (req, res, next) => {
   }).limit(3);
 
   // add new filter
-  filters.push({
-    title: "New",
-    items: newProducts,
-    type: 'product',
-    hasMore: true,
-    url: '/new'
-  });
+  // filters.push({
+  //   title: "New",
+  //   items: newProducts,
+  //   type: 'product',
+  //   hasMore: true,
+  //   url: '/new'
+  // });
 
   // select shop by categories
   const categories = await Category.find({

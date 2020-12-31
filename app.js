@@ -6,6 +6,14 @@ var logger = require('morgan');
 var authRouter = require('./routes/auth');
 var themesRouter = require('./routes/themes');
 var filtersRouter = require('./routes/filters');
+var countriesRouter = require('./routes/country');
+var interestRouter = require('./routes/interest');
+var productsRouter = require('./routes/product');
+var continentsRouter = require('./routes/continents');
+var orderRouter = require('./routes/orders') 
+
+
+
 
 //cors 
 var cors = require('cors')
@@ -21,10 +29,15 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../uploads')));
 app.use('/auth', authRouter);
 app.use('/themes', themesRouter);
 app.use('/filters', filtersRouter);
+app.use('/countries', countriesRouter);
+app.use('/interest', interestRouter);
+app.use('/products', productsRouter);
+app.use('/continents', continentsRouter);
+app.use('/orders', orderRouter)
 
 
 const bodyParser = require('body-parser');

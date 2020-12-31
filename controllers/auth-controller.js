@@ -21,7 +21,7 @@ const register = async (req, res, next) => {
   const newUser = req.body;
 
   // validate body
-  if (!newUser.email || !newUser.password || !newUser.birthDate) {
+  if (!newUser.email || !newUser.password || !newUser.birthDate || !newUser.country) {
     res.status(400).send({
       message: 'All fields are required'
     });
@@ -78,7 +78,7 @@ const login = async (req, res, next) => {
 
       if (compareHashResult === true) {
         res.status(200).send({
-          token: "123",
+          _id: user._id,
           email: loggedUser.email
         });
       } else {
@@ -181,6 +181,7 @@ const changePassword = async (req, res, next) => {
   res.send();
 
 }
+
 
 module.exports = {
   register,
