@@ -2,6 +2,7 @@
 
  // Connect to MongoDB via Mongoose
  seeder.connect('mongodb+srv://lego_user:L2At1JngbBUu8Vs6@lego.zv7kt.mongodb.net/Lego?retryWrites=true&w=majority', function () {
+  // seeder.connect('mongodb://localhost:27017/Lego', function () {
 
    // Load Mongoose models
    seeder.loadModels([
@@ -74,25 +75,14 @@
          "title": "DC",
          "visibleId": "dc",
          "_id": "5feaf44a58b1622d2d93b94c"
-       },
-       {
-         "title": "Creator",
-         "visibleId": "creator"
-       },
-       {
-         "title": "DOTS",
-         "visibleId": "dots"
-       },
-       {
-         "title": "Disney",
-         "visibleId": "disney"
        }
      ]
    },
    {
      'model': 'products',
-     'documents': [{
-         "title": "Batman toy",
+     'documents': [
+       {
+         "title": "Droid ",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "trending": true,
          "numberOfProduct": 2345,
@@ -100,7 +90,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 5,
-         "images": ["40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["q4.jpeg", "q3.jpeg", "q2.jpeg"],
          "theme": "5fe64ba515f53c030533c136",
          "interest": "5fe880a0fb31066bbb5d23cd",
          "price": 55,
@@ -111,7 +101,7 @@
          "ageCategory": "5ff1f3795c8dd0ad9f606f04"
        },
        {
-         "title": "Superman toy",
+         "title": "Droid Commander ",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "theme": "5fe64ba515f53c030533c136",
          "interest": "5fe880c8209122442568d425",
@@ -122,7 +112,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 1,
-         "images": ["superman.jpeg", "specificationImg4.jpeg", "specificationImg4.jpeg"],
+         "images": ["q1.jpeg", "q2.jpeg", "q3.jpeg"],
          "price": 40,
          "rating": 5,
          "productType": "5ff1f3454857524f1b59f5ea",
@@ -141,7 +131,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 2,
-         "images": ["specificationImg1.jpeg", "40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["b2.jpeg", "b4.jpeg", "b1.jpeg"],
          "price": 55,
          "rating": 5,
          "productType": "5ff1f34e7f4f0166338b5b66",
@@ -149,7 +139,7 @@
          "ageCategory": "5ff1f371921adcd711f05264"
        },
        {
-         "title": "Hulk toy",
+         "title": "Batman toy",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "trending": true,
          "theme": "5fe64b92438ee9d3e643db6a",
@@ -160,7 +150,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 3,
-         "images": ["specificationImg3.jpeg", "40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["bat1.jpeg","bat2.jpeg","bat3.jpeg","bat4.jpeg"],
          "price": 20,
          "rating": 2,
          "productType": "5ff1f3277f3bb188c7d562de",
@@ -168,11 +158,11 @@
          "ageCategory": "5ff1f3795c8dd0ad9f606f04"
        },
        {
-         "title": "Captin America toy",
+         "title": "German face",
          "image": "75257.jpg",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "theme": "5fe64b92438ee9d3e643db6a",
-         "interest": "5fe8814205c5a19faf7daa9e",
+         "interest": "5fe8812d38a851b27db78483",
          "trending": true,
          "spotlight": false,
          "numberOfProduct": 2345,
@@ -180,7 +170,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 6,
-         "images": ["specificationImg3.jpeg", "40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["z1.jpeg", "z2.jpeg", "z3.jpeg", "z4.jpeg"],
          "price": 30,
          "rating": 3,
          "productType": "5ff1f3454857524f1b59f5ea",
@@ -188,19 +178,19 @@
          "ageCategory": "5ff1f3816fd9b19087b07410"
        },
        {
-         "title": "Batman toy",
+         "title": "Batman Face",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "image": "eman.jpeg",
          "trending": true,
          "theme": "5fe64b92438ee9d3e643db6a",
-         "interest": "5fe8811a1eacf55b0f2f60db",
+         "interest": "5fe8812d38a851b27db78483",
          "spotlight": false,
          "numberOfProduct": 2345,
          "avaliable": true,
          "vipPoints": 84,
          "pieces": 3,
          "age": 1,
-         "images": ["vichel.jpeg", "myBag.png", "myBag.png"],
+         "images": ["f1.jpeg", "f2.jpeg", "f3.jpeg","f4.jpeg"],
          "price": 15,
          "rating": 2,
          "productType": "5ff1f34e7f4f0166338b5b66",
@@ -208,7 +198,7 @@
          "ageCategory": "5ff1f371921adcd711f05264"
        },
        {
-         "title": "Ninga toy",
+         "title": "Creative toy",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "trending": true,
          "numberOfProduct": 2345,
@@ -216,7 +206,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 4,
-         "images": ["40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["b1.jpeg", "b3.jpeg", "b4.jpeg"],
          "theme": "5fe64ba515f53c030533c136",
          "interest": "5fe8811a1eacf55b0f2f60db",
          "price": 60,
@@ -227,15 +217,15 @@
          "ageCategory": "5ff1f3795c8dd0ad9f606f04"
        },
        {
-         "title": "City toy",
+         "title": "ًwhite toy",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "trending": true,
          "numberOfProduct": 2345,
          "avaliable": true,
          "vipPoints": 84,
          "pieces": 3,
-         "age": 1,
-         "images": ["40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "age": 7,
+         "images": ["i4.png", "i2.png", "i3.png"],
          "theme": "5fe64b7023ef326bd5ca8201",
          "interest": "5fe8811a1eacf55b0f2f60db",
          "price": 50,
@@ -246,7 +236,7 @@
          "ageCategory": "5ff1f371921adcd711f05264"
        },
        {
-         "title": "Batman toy",
+         "title": "shopping street",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "image": "eman.jpeg",
          "trending": true,
@@ -258,7 +248,7 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 7,
-         "images": ["vichel.jpeg", "myBag.png", "myBag.png"],
+         "images": ["c1.png", "c2.png", "c3.png"],
          "price": 70,
          "rating": 3,
          "productType": "5ff1f34e7f4f0166338b5b66",
@@ -266,30 +256,72 @@
          "ageCategory": "5ff1f3816fd9b19087b07410"
        },
        {
-         "title": "City toy",
-         "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
-         "trending": true,
-         "numberOfProduct": 2345,
-         "avaliable": true,
-         "vipPoints": 84,
-         "pieces": 3,
-         "age": 3,
-         "images": ["40367.jpeg", "40367.jpeg", "40367.jpeg"],
-         "theme": "5feaf3ea8e343a7e585d069b",
-         "interest": "5fe8811a1eacf55b0f2f60db",
-         "price": 60,
-         "rating": 4,
-         "spotlight": true,
-         "productType": "5ff1f3277f3bb188c7d562de",
-         "priceCategory": "5ff1f36993386b9a6ba63e36",
-         "ageCategory": "5ff1f3795c8dd0ad9f606f04"
-       },
+        "title": "city toy",
+        "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
+        "image": "eman.jpeg",
+        "trending": true,
+        "theme": "5feaf37b58b666d095b6b018",
+        "interest": "5fe8811a1eacf55b0f2f60db",
+        "spotlight": false,
+        "numberOfProduct": 2345,
+        "avaliable": true,
+        "vipPoints": 84,
+        "pieces": 3,
+        "age": 7,
+        "images": ["c3.png", "c4.jpeg", "c2.png"],
+        "price": 70,
+        "rating": 3,
+        "productType": "5ff1f34e7f4f0166338b5b66",
+        "priceCategory": "5ff1f36993386b9a6ba63e36",
+        "ageCategory": "5ff1f3816fd9b19087b07410"
+      },
        {
-         "title": "Captin America toy",
+        "title": "city toy",
+        "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
+        "image": "eman.jpeg",
+        "trending": true,
+        "theme": "5feaf37b58b666d095b6b018",
+        "interest": "5fe8811a1eacf55b0f2f60db",
+        "spotlight": false,
+        "numberOfProduct": 2345,
+        "avaliable": true,
+        "vipPoints": 84,
+        "pieces": 3,
+        "age": 7,
+        "images": ["i1.jpeg", "c2.png", "c3,png"],
+        "price": 70,
+        "rating": 3,
+        "productType": "5ff1f34e7f4f0166338b5b66",
+        "priceCategory": "5ff1f36993386b9a6ba63e36",
+        "ageCategory": "5ff1f3816fd9b19087b07410"
+      },
+
+      {
+        "title": "city toy",
+        "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
+        "image": "eman.jpeg",
+        "trending": true,
+        "theme": "5feaf37b58b666d095b6b018",
+        "interest": "5fe8811a1eacf55b0f2f60db",
+        "spotlight": false,
+        "numberOfProduct": 2345,
+        "avaliable": true,
+        "vipPoints": 84,
+        "pieces": 3,
+        "age": 7,
+        "images": ["c4.jpeg", "c2.png", "c3.png"],
+        "price": 70,
+        "rating": 3,
+        "productType": "5ff1f34e7f4f0166338b5b66",
+        "priceCategory": "5ff1f36993386b9a6ba63e36",
+        "ageCategory": "5ff1f3816fd9b19087b07410"
+      },
+       {
+         "title": "Cars",
          "image": "75257.jpg",
          "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
          "theme": "5feaf44a58b1622d2d93b94c",
-         "interest": "5fe8814205c5a19faf7daa9e",
+         "interest": "5fe880c8209122442568d425",
          "trending": true,
          "spotlight": false,
          "numberOfProduct": 2345,
@@ -297,13 +329,32 @@
          "vipPoints": 84,
          "pieces": 3,
          "age": 4,
-         "images": ["specificationImg3.jpeg", "40367.jpeg", "40367.jpeg", "40367.jpeg"],
+         "images": ["car1.webp", "car2.webp"],
          "price": 65,
          "rating": 3,
          "productType": "5ff1f3277f3bb188c7d562de",
          "priceCategory": "5ff1f36993386b9a6ba63e36",
          "ageCategory": "5ff1f3795c8dd0ad9f606f04"
-       }
+       },
+       {
+        "title": "Arch toy",
+        "subTitle": "LEGO® City is a realistic LEGO world for your child to explore and stimulate their creativity.",
+        "trending": true,
+        "theme": "5fe64b7023ef326bd5ca8201",
+        "interest": "5fe8811a1eacf55b0f2f60db",
+        "spotlight": false,
+        "numberOfProduct": 2344,
+        "avaliable": true,
+        "vipPoints": 80,
+        "pieces": 3,
+        "age": 4,
+        "images": ["i3.png", "i4.png", "i2.png"],
+        "price": 70,
+        "rating": 3,
+        "productType": "5ff1f34e7f4f0166338b5b66",
+        "priceCategory": "5ff1f36993386b9a6ba63e36",
+        "ageCategory": "5ff1f3816fd9b19087b07410"
+      }
      ]
    },
    {
@@ -388,18 +439,18 @@
      'documents': [{
          "_id": "5ff1f3277f3bb188c7d562de",
          "title": "Accessories",
-         "image": ""
+         "image": "acc.webp"
        },
        {
          "_id": "5ff1f3454857524f1b59f5ea",
          "title": "Gift Cards",
-         "image": ""
+         "image": "mybag.png"
 
        },
        {
          "_id": "5ff1f34e7f4f0166338b5b66",
          "title": "Books",
-         "image": ""
+         "image": "book.webp"
        }
      ]
    },
@@ -408,17 +459,17 @@
      'documents': [{
          "_id": "5ff1f3573d82f5a13887a291",
          "title": "Under 25$",
-         "image": "specificationImg3.jpeg"
+         "image": "trending1.jpeg"
        },
        {
          "_id": "5ff1f3607490b9f5d5445e76",
          "title": "25$ - 50$",
-         "image": "40367.jpeg"
+         "image": "trending2.jpeg"
        },
        {
          "_id": "5ff1f36993386b9a6ba63e36",
          "title": "50$ - 75$",
-         "image": "vichel.jpeg"
+         "image": "trending3.jpeg"
        }
      ]
    },
@@ -427,17 +478,17 @@
      'documents': [{
          "_id": "5ff1f371921adcd711f05264",
          "title": "1-2",
-         "image": ""
+         "image": "age1.webp"
        },
        {
          "_id": "5ff1f3795c8dd0ad9f606f04",
          "title": "3-5",
-         "image": ""
+         "image": "age2.webp"
        },
        {
          "_id": "5ff1f3816fd9b19087b07410",
          "title": "6-8",
-         "image": ""
+         "image": "age3.webp"
        }
      ]
    }
