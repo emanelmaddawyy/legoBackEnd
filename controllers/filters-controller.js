@@ -1,42 +1,81 @@
 const Product = require('../models/Product');
 const Category = require('../models/Category');
+const ProductType = require('../models/ProductType');
+const Age = require('../models/Age');
+const Price = require('../models/Price');
+const Theme = require('../models/Themes');
+const Interest = require('../models/Interest');
 
 const getShopByFilters = async (req, res, next) => {
-  // init filters arr
-  const filters = [];
+  try {
+    const productTypes = await ProductType.find();
+    const prices = await Price.find();
+    const ages = await Age.find();
 
-  // get top 3 new products
-  const newProducts = await Product.find().sort({
-    createdAt: 'desc'
-  }).limit(3);
+    res.send([
+      {
+        title: 'Product Types',
+        key: 'productType',
+        data: productTypes
+      },
+      {
+        title: 'Ages',
+        key: 'ageCategory',
+        data: ages
+      },
+      {
+        title: 'Prices',
+        key: 'priceCategory',
+        data: prices
+      }
+    ]);
+  } catch(e) {
+    next(e);
+  }
+}
 
-  // add new filter
-  // filters.push({
-  //   title: "New",
-  //   items: newProducts,
-  //   type: 'product',
-  //   hasMore: true,
-  //   url: '/new'
-  // });
+// getProductFilters api
+const getProductFilters = async (req, res, next) => {
+  try {
+    const productTypes = await ProductType.find();
+    const prices = await Price.find();
+    const ages = await Age.find();
+    const themes = await Theme.find();
+    const interests = await Interest.find();
 
-  // select shop by categories
-  const categories = await Category.find({
-    displayForShopByFilter: true
-  });
-
-  console.log('categories: ', categories);
-
-  categories.forEach(category => filters.push({
-    title: category.title,
-    items: category.subCategories,
-    type: 'category',
-    hasMore: false,
-    url: null
-  }))
-
-  res.send(filters);
+    res.send([
+      {
+        title: 'Product Types',
+        key: 'productType',
+        data: productTypes
+      },
+      {
+        title: 'Ages',
+        key: 'ageCategory',
+        data: ages
+      },
+      {
+        title: 'Prices',
+        key: 'priceCategory',
+        data: prices
+      },
+      {
+        title: 'Themes',
+        key: 'theme',
+        data: themes
+      },
+      {
+        title: 'Interests',
+        key: 'interest',
+        data: interests
+      }
+    ]);
+  } catch(e) {
+    next(e);
+  }
 }
 
 module.exports = {
-  getShopByFilters
+  getShopByFilters,
+  getProductFilters
 }

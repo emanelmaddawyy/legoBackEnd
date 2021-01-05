@@ -6,13 +6,13 @@ const schema = new Schema({
     type: String,
     required: true
   },
-  subTitle:{
-    type:String
+  subTitle: {
+    type: String
   },
-  price:{
-    type:Number
+  price: {
+    type: Number
   },
-  rating:{
+  rating: {
     type: Number
   },
   images: {
@@ -23,33 +23,44 @@ const schema = new Schema({
     default: false
   },
   spotlight: {
-    type:Boolean,
-    default:false
+    type: Boolean,
+    default: false
   },
-  numberOfProduct:{
-    type:Number
+  numberOfProduct: {
+    type: Number
   },
   avaliable: {
     type: Boolean,
     default: false
   },
-  itemNo:Number,
-  vipPoints:Number,
-  pieces:Number,
-  age:Number,
-  numberOfReviews:Number,
-  theme:{
+  itemNo: Number,
+  vipPoints: Number,
+  pieces: Number,
+  age: Number,
+  numberOfReviews: Number,
+  theme: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'themes',
-    required:true
+    required: true
   },
-  interest:{
+  interest: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'interest',
-    required:true
+    required: true
   },
-  itemNo:Number
-
+  itemNo: Number,
+  productType: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'productTypes'
+  },
+  ageCategory: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'ages'
+  },
+  priceCategory: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'prices',
+  },
 }, {
   timestamps: true
 });

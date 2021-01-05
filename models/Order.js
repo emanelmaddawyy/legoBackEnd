@@ -19,6 +19,11 @@ const schema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'users',
     required: true
+  },
+  status:{
+    type:String,
+    required:true,
+    default:"Pending"
   }
 }, {
   timestamps: true

@@ -11,6 +11,8 @@ var interestRouter = require('./routes/interest');
 var productsRouter = require('./routes/product');
 var continentsRouter = require('./routes/continents');
 var orderRouter = require('./routes/orders') 
+var subscribeRouter = require('./routes/subscribe')
+
 
 
 
@@ -22,6 +24,7 @@ const mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.connect('mongodb+srv://lego_user:L2At1JngbBUu8Vs6@lego.zv7kt.mongodb.net/Lego?retryWrites=true&w=majority', {useNewUrlParser: true,  useUnifiedTopology: true})
+// mongoose.connect('mongodb://localhost:27017/Lego', {useNewUrlParser: true,  useUnifiedTopology: true})
 
 var app = express();
 app.use(cors());
@@ -38,6 +41,8 @@ app.use('/interest', interestRouter);
 app.use('/products', productsRouter);
 app.use('/continents', continentsRouter);
 app.use('/orders', orderRouter)
+app.use('/subscribe', subscribeRouter)
+
 
 
 const bodyParser = require('body-parser');

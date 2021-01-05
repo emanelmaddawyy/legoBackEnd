@@ -79,7 +79,8 @@ const login = async (req, res, next) => {
       if (compareHashResult === true) {
         res.status(200).send({
           _id: user._id,
-          email: loggedUser.email
+          email: loggedUser.email,
+          isAdmin: user.isAdmin
         });
       } else {
         res.status(401).send({

@@ -4,13 +4,15 @@ const makeOrder = async (req, res, next) => {
   const orderDetails = req.body;
 
   // validate body
-  if (!orderDetails.user || !orderDetails.products) {
+  if (!orderDetails.user || !orderDetails.products ) {
     res.status(400).send({
       message: 'All fields are required'
     });
 
     return;
   }
+
+  orderDetails.status = "Pending";
 
   // save order
   try {
@@ -25,11 +27,10 @@ const makeOrder = async (req, res, next) => {
 
 const getOrders = async (req, res, next) => {
   const userId = req.query.userId;
+  const query = userId ? { user: userId } : {};
 
   try {
-    const orders = await Order.find({
-        user: userId
-      }).sort({
+    const orders = await Order.find(query).sort({
         createdAt: 'DESC'
       })
       .populate({
@@ -47,7 +48,30 @@ const getOrders = async (req, res, next) => {
   }
 }
 
+const updateOrderStatus = async (req, res, next) => {
+  const orderDetails = req.body;
+
+  // validate body
+  if (!orderDetails._id || !orderDetails.status ) {
+    res.status(400).send({
+      message: 'All fields are required'
+    });
+
+    return;
+  }
+
+  // save order
+  try {
+    await Order.updateOne({_id: orderDetails._id}, {status: orderDetails.status});
+
+    res.status(200).send();
+  } catch (error) {
+    next(error);
+  }
+}
+
 module.exports = {
   makeOrder,
-  getOrders
+  getOrders,
+  updateOrderStatus
 }

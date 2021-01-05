@@ -4,6 +4,7 @@ var router = express.Router();
 
 
 router.get("/", controller.products);
+router.post("/getProductsFiltered", controller.getProductsFiltered);
 router.get("/:id", controller.getProductDetails);
 
 module.exports = router;

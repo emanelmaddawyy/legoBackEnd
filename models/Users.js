@@ -20,7 +20,11 @@ const UsersSchema = new Schema({
     ref: 'countries',
     required:true
   },
-  resetCode: String
+  resetCode: String,
+  isAdmin: {
+    type: Boolean,
+    default: false
+  }
 });
 
 const Users = mongoose.model('users', UsersSchema);
